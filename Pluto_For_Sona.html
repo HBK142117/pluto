@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sona's Pluto</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .pluto {
+      width: 100px;
+      height: 100px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg/640px-Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg');
+      background-size: cover;
+      border-radius: 50%;
+      position: absolute;
+      animation: orbit 20s linear infinite;
+    }
+    @keyframes orbit {
+      0%   { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+      100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+    .message {
+      position: relative;
+      z-index: 2;
+      max-width: 80%;
+      text-align: center;
+      font-size: 1.5em;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message">
+      <p>"You asked for Pluto, so I gave you one of your own. Cold to the universe, warm only for you. Orbiting forever around your smile, Alaska. 💫"</p>
+    </div>
+    <div class="pluto"></div>
+  </div>
+</body>
+</html>
